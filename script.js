@@ -1,4 +1,4 @@
-// String Manipulation Functions:
+//STRING MANIPULATION FUNCTIONS:
 
 // Reverse a String: Write a function that reverses a given string.
 function reverseString(str) {
@@ -49,3 +49,53 @@ function capitalizeWords(sentence) {
 // 🧪 Example usage:
 console.log(capitalizeWords("hello world from javascript")); 
 // ➤ "Hello World From Javascript"
+// -------------------------------
+// ARRAY FUNCTIONS:
+
+// Find Maximum and Minimum: Write functions to find the maximum and minimum values in an array of numbers.
+function findMax(arr) {
+  let max = arr[0]; // Start with the first number
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]; // Update max if current number is greater
+    }
+  }
+
+  return max; // Return the highest value
+}
+
+
+
+
+// Sum of Array: Create a function that calculates the sum of all elements in an array.
+function sumArray(arr) {
+  let sum = 0; // Start with 0
+
+  // Loop through each element in the array
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]; // Add current element to sum
+  }
+
+  return sum; // Return the final total
+}
+
+// 🧪 Example usage:
+console.log(sumArray([1, 2, 3, 4, 5])); // ➤ 15
+
+
+
+// Filter Array: Implement a function that filters out elements from an array based on a given condition.
+function filterArray(arr, conditionFn) {
+  let result = [];
+
+  // Loop through each element in the array
+  for (let i = 0; i < arr.length; i++) {
+    // Only add element if it passes the condition
+    if (conditionFn(arr[i])) {
+      result.push(arr[i]);
+    }
+  }
+
+  return result; // Return filtered array
+}
