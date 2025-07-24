@@ -99,3 +99,43 @@ function filterArray(arr, conditionFn) {
 
   return result; // Return filtered array
 }
+// -----------------
+// MATHEMATICAL FUNCTIONS
+
+// Factorial: Write a function to calculate the factorial of a given number.
+function factorial(n) {
+  let result = 1;
+
+  // Multiply numbers from 1 up to n
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+
+// 🧪 Example usage:
+console.log(factorial(5)); // ➤ 120 (5 * 4 * 3 * 2 * 1)
+
+// Prime Number Check: Create a function to check if a number is prime or not.
+function isPrime(n) {
+  if (n <= 1) return false; // 0 and 1 are not prime
+
+  // Check from 2 up to the square root of n
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false; // If divisible by any i, it's not prime
+    }
+  }
+
+  return true; // No divisors found → it's prime
+}
+
+// 🧪 Example usage:
+console.log(isPrime(7));  // ➤ true
+console.log(isPrime(10)); // ➤ false
+
+
+// Fibonacci Sequence: Implement a function to generate the Fibonacci sequence up to a given number of terms. (search on the net )
+
+// (to do later)
